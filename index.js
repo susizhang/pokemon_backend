@@ -1,8 +1,13 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5020;
+const cors = require("cors");
 
-const jsonData = require("./file.json");
-app.listen(post, () => {
-  console.log(`Connected to post ${port}`);
+const pokemonRouter = require("./routes/pokemonRouter");
+
+app.use("/pokemon", pokemonRouter);
+app.use(cors());
+
+app.listen(port, () => {
+  console.log(`Connected to port ${port}`);
 });
