@@ -10,6 +10,6 @@ pokemonRouter.route("/").get(getAllPokemon);
 
 pokemonRouter.route("/:id").get(getSinglePokemon);
 
-pokemonRouter.route("/:id/:type").get(getSinglePokemonInfo);
+pokemonRouter.route("/:id/:info").get(getSinglePokemonInfo);
 
 module.exports = pokemonRouter;
