@@ -28,7 +28,7 @@ const getSinglePokemonInfo = (req, res) => {
   if (info === "name") {
     res.status(200).json(singlePokemon.name.english);
   } else if (info === "type") {
-    res.status(200).json(singlePokemon.type[0]);
+    res.status(200).json(singlePokemon.type);
   } else if (info === "base") {
     res.status(200).json(singlePokemon.base);
   }
