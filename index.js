@@ -6,7 +6,8 @@ const cors = require("cors");
 
 const pokemonRouter = require("./routes/pokemonRouter");
 
-app.use(cors());
+app.use(cors()); // should place very top , otherwise cannot work
+
 app.use("/pokemon", pokemonRouter);
 
 // app.use(express.json());

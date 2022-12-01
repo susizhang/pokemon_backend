@@ -34,6 +34,22 @@ const getSinglePokemonInfo = (req, res) => {
   }
 };
 
+// getSinglePokemonInfo
+
+// const singlePokemon = pokedex.find(
+//   (pokemon) => pokemon.id === parseInt(id, 10)
+// );
+// const allowedFields = ["name", "type", "base"];
+
+// if (!info || !allowedFields.find((field) => field === info))
+//   return res.status(400).send("You cannot request for that info");
+
+// // if (!info || !allowedRequests.some(each => each === info))
+// //   return res.status(400).send("You can not request for that info");
+
+// if (!singlePokemon) return res.status(404).send("No Pokemon with that ID");
+// res.status(200).send(singlePokemon[info]);
+
 module.exports = {
   getAllPokemon,
   getSinglePokemon,
