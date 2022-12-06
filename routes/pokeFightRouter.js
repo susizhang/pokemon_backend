@@ -6,7 +6,7 @@ const {
 
 const pokeFightRouter = Router();
 
-pokeFightRouter.route("/game/leaderboard").get(getFightInformation);
-pokeFightRouter.route("/game/save").post(addFightInformation);
+pokeFightRouter.route("/leaderboard").get(getFightInformation);
+pokeFightRouter.route("/save").post(addFightInformation);
 
 module.exports = pokeFightRouter;

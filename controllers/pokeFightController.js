@@ -1,5 +1,5 @@
 const connectDB = require("../config/connectDB");
-connectDB;
+connectDB();
 
 const PokeFight = require("../models/pokeFightModel");
 
@@ -16,13 +16,16 @@ const getFightInformation = async (req, res) => {
 };
 
 const addFightInformation = async (req, res) => {
+  //   console.log(" ", req.body);
   try {
     const newFightInfo = await PokeFight.create({
       winner: req.body.winner,
       loser: req.body.loser,
     });
+
+    res.status(200).json(newFightInfo);
   } catch (error) {
-    res.status(400).send({ msg: "Can not save this FightInformation" });
+    res.status(400).send({ msg: "Can not save this FightInformation", error });
   }
 };
 
