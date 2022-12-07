@@ -25,7 +25,12 @@ const addFightInformation = async (req, res) => {
 
     res.status(200).json(newFightInfo);
   } catch (error) {
-    res.status(400).send({ msg: "Can not save this FightInformation", error });
+    res
+      .status(400)
+      .send({
+        msg: "Can not save this FightInformation",
+        error: error.message,
+      });
   }
 };
 
